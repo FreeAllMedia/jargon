@@ -74,6 +74,8 @@ jargon("apple_tree").camel.plural.toString(); //appleTrees
 
 # Development
 
+This section is for those that would like to help with development of Jargon.
+
 ## Style Guide
 
 All pull requests must completely pass our `.eslintrc` style enforcement. Check `./.eslintrc` for a list of our rules.
