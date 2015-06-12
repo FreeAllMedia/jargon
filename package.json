@@ -1,6 +1,6 @@
 {
   "name": "jargon",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Change string between case formats and pluralization in a chained interface.",
   "main": "index.js",
   "scripts": {

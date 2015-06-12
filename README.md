@@ -76,7 +76,7 @@ jargon("apple_tree").camel.plural.toString(); //appleTrees
 
 ## Style Guide
 
-
+All pull requests must completely pass our `.eslintrc` style enforcement. Check `./.eslintrc` for a list of our rules.
 
 ## Public Shared Floobits Workspace
 
