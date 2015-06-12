@@ -1,5 +1,5 @@
 {
-  "name": "inflect",
+  "name": "jargon",
   "version": "0.1.0",
   "description": "Change string between case formats and pluralization in a chained interface.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/FreeAllMedia/inflect.git"
+    "url": "https://github.com/FreeAllMedia/jargon.git"
   },
   "keywords": [
     "Inflect",
@@ -29,17 +29,17 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FreeAllMedia/inflect/issues"
+    "url": "https://github.com/FreeAllMedia/jargon/issues"
   },
-  "homepage": "https://github.com/FreeAllMedia/inflect",
+  "homepage": "https://github.com/FreeAllMedia/jargon",
+  "dependencies": {
+    "inflection": "^1.7.1"
+  },
   "devDependencies": {
     "babel": "^5.5.6",
     "chai": "^3.0.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.1.0",
-    "gulp-mocha": "^2.1.1",
-    "gulp-run-sequence": "^0.3.2",
-    "inflection": "^1.7.1",
-    "run-sequence": "^1.1.0"
+    "gulp-mocha": "^2.1.1"
   }
 }
