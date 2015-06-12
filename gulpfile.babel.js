@@ -1,6 +1,7 @@
 import gulp from "gulp";
 import mocha from "gulp-mocha";
 import babel from "gulp-babel";
+import chai from "chai";
 
 const paths = {
 	"source": {
@@ -16,6 +17,8 @@ const paths = {
 		"spec": "./es5/spec/**/*.spec.js"
 	}
 };
+
+chai.should();
 
 gulp.task("build", ["build-lib", "build-spec"]);
 
