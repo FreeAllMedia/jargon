@@ -1,0 +1,15 @@
+{
+	"source": {
+		"lib": "./es6/lib/**/*.js",
+		"spec": "./es6/spec/**/*.spec.js"
+	},
+
+	"build": {
+		"directories": {
+			"lib": "./es5/lib",
+			"spec": "./es5/spec"
+		},
+		"lib": "./es5/lib/**/*.js",
+		"spec": "./es5/spec/**/*.spec.js"
+	}
+}
