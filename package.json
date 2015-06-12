@@ -1,0 +1,45 @@
+{
+  "name": "jargon",
+  "version": "0.1.1",
+  "description": "Change string between case formats and pluralization in a chained interface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FreeAllMedia/jargon.git"
+  },
+  "keywords": [
+    "Inflect",
+    "Change",
+    "Case",
+    "String"
+  ],
+  "author": "FreeAllMedia, LLC",
+  "contributors": [
+    {
+      "name": "nicosommi",
+      "email": "nicosommi@gmail.com"
+    },
+    {
+      "name": "dcrockwell",
+      "email": "dcautomates@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FreeAllMedia/jargon/issues"
+  },
+  "homepage": "https://github.com/FreeAllMedia/jargon",
+  "dependencies": {
+    "inflection": "^1.7.1"
+  },
+  "devDependencies": {
+    "babel": "^5.5.6",
+    "chai": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-mocha": "^2.1.1"
+  }
+}
