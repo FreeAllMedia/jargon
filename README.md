@@ -1,84 +1,150 @@
-[![Code Climate](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/gpa.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/feed)
-[![Test Coverage](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/coverage.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/coverage)
-[![Dependency Status](https://david-dm.org/FreeAllMedia/jargon.png?theme=shields.io)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io)
-[![Dev Dependency Status](https://david-dm.org/FreeAllMedia/jargon/dev-status.svg)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io#info=devDependencies)
-[![Build Status](https://travis-ci.org/FreeAllMedia/jargon.png?branch=master)](https://travis-ci.org/FreeAllMedia/jargon)
-
 # Jargon.js
 
-Change string between case formats and pluralization in a chained interface.
+An inflection/case/format/pluralization component with a chainable transforms.
 
-# Installation
+[![npm version](https://img.shields.io/npm/v/jargon.svg)](https://www.npmjs.com/package/jargon) [![npm downloads](https://img.shields.io/npm/dm/jargon.svg)](https://www.npmjs.com/package/jargon)
 
-## Install NPM Package
+[![Build Status](https://travis-ci.org/FreeAllMedia/jargon.png?branch=master)](https://travis-ci.org/FreeAllMedia/jargon) [![Test Coverage](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/coverage.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/coverage) [![Code Climate](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/gpa.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/feed)
+
+[![Dependency Status](https://david-dm.org/FreeAllMedia/jargon.png?theme=shields.io)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io) [![Dev Dependency Status](https://david-dm.org/FreeAllMedia/jargon/dev-status.svg)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io#info=devDependencies)
+
+# Usage
+
+## Install via `npm`
 
 ```
 npm install jargon
 ```
 
-## Import Jargon Into Your File
+## Run Automated Tests
 
-**es6:**
-
-```
-import jargon from "jargon";
-```
-
-**es5:**
+We automatically test every release against node versions `0.10`, `0.11`, `0.12`, and `iojs-v2`. If you are using a different environment, run our tests to ensure that Jargon works as intended for you.
 
 ```
-var jargon = require("jargon");
+cd node_modules/jargon
+npm test
 ```
 
-# Usage
-
-These are examples of single transforms on a string. All of the methods below can be chained to create more complex transforms. See [`chaining`](#chaining).
-
-## Pluralization
+## Import `inflect` from jargon
 
 ```
-jargon("apple").plural.toString(); //apples
+// ES6
+import inflect from "jargon";
 ```
 
-## Camel casing
 ```
-jargon("apple tree").camel.toString(); //appleTree
-```
-
-## Pascal casing
-```
-jargon("apple_tree").pascal.toString(); //AppleTree
+// ES5
+var inflect = require("jargon");
 ```
 
-## Snake casing
-```
-jargon("appleTree").snake.toString(); //apple_tree
-```
+## Inflector Instances
 
-## Foreign Key casing
-```
-jargon("appleTree").foreignKey.toString(); //apple_tree_id
-```
+The `inflect()` command returns an independent `Inflector` instance which allows one or more transforms to be completed, before returning the final string via `.toString()`.
 
-## Table casing
-```
-jargon("apple tree").table.toString(); //apples
-```
+For example, the following two snippets are functionally equivalent:
 
-## Chaining
-Every method is chainable so you can combine them. But remember to finalize the chain with "toString();".
+**Inline:**
 
 ```
-jargon("apple_tree").camel.plural.toString(); //appleTrees
+inflect("apple").plural.toString(); // apples
 ```
 
-# Development
+**Progressive:**
 
-This section is for those that would like to help with development of Jargon.
+```
+const inflector = inflect("apple");
 
-## Style Guide
+inflector.plural;
 
-All pull requests must completely pass our `.eslintrc` style enforcement. Check `./.eslintrc` for a list of our rules.
+inflector.toString(); // apples
+```
+
+### Chaining Transforms
+
+In addition to single transforms, `Inflector` instances support chaining of multiple transforms, such as in these two functionally equivalent examples:
+
+**Inline:**
+
+```
+inflect("apple tree").plural.pascal.toString(); // AppleTrees
+```
+
+**Progressive:**
+
+```
+const inflector = inflect("apple tree");
+
+inflector.plural;
+inflector.pascal;
+
+inflector.toString(); // AppleTrees
+```
+
+### Exceptions
+
+In cases where you need special exceptions to inflection transforms, you can provide a list of `irregular` and `uncountable` phrases which will be honored in all subsequent instances.
+
+```
+inflect.irregular = {
+  "person": "people",
+  "goose": "geese"
+};
+
+inflect.uncountable = [
+  "sheep"
+];
+
+inflect("goose person").plural.toString(); // geese people
+inflect("sheep").plural.toString(); // sheep
+```
+
+# Transforms
+
+Each of these transforms can be chained together to perform more complex changes.
+
+## Plural
+
+```
+inflect("apple").plural.toString(); // apples
+```
+
+## Camel
+
+```
+inflect("apple tree").camel.toString(); // appleTree
+```
+
+## Pascal
+
+```
+inflect("apple_tree").pascal.toString(); // AppleTree
+```
+
+## Snake
+
+```
+inflect("appleTree").snake.toString(); // apple_tree
+```
+
+## Foreign Key
+
+```
+inflect("appleTree").foreignKey.toString(); // apple_tree_id
+```
+
+## Table
+
+```
+inflect("AppleTree").table.toString(); // apple_trees
+```
+
+# Contribute to Jargon.js development
+
+You are highly encouraged to fork this repo, make enhancements, and submit pull requests back. To contribute:
+
+1. You must follow strict test-driven best practices.
+  * Tests must be written prior to library code being written. Google `Red, Green, Refactor` for more information on this expectation.
+2. You must adhere to our automated `.eslintrc` style guide and can ensure that it is passing without warnings or errors before you submit a pull request.
 
 ## Public Shared Floobits Workspace
 
