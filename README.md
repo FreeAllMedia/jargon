@@ -8,24 +8,26 @@ An inflection/case/format/pluralization component with a chainable transforms.
 
 [![Dependency Status](https://david-dm.org/FreeAllMedia/jargon.png?theme=shields.io)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io) [![Dev Dependency Status](https://david-dm.org/FreeAllMedia/jargon/dev-status.svg)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io#info=devDependencies)
 
-# Usage
+## Compatibility
 
-## Install via `npm`
+We automatically test every release against:
+
+* **node:** `0.10`, `0.11`, `0.12`, & `iojs`
+* **browsers:** `Safari`, `Chrome`, `PhantomJS`, `Firefox`
+
+# Getting Started
+
+## Installation
 
 ```
 npm install jargon
 ```
 
-## Run Automated Tests
+## Setup
 
-We automatically test every release against node versions `0.10`, `0.11`, `0.12`, and `iojs-v2`. If you are using a different environment, run our tests to ensure that Jargon works as intended for you.
+### Node.js / Browserify / Webpack
 
-```
-cd node_modules/jargon
-npm test
-```
-
-## Import `inflect` from jargon
+#### Import `inflect` from jargon
 
 ```
 // ES6
@@ -35,6 +37,16 @@ import inflect from "jargon";
 ```
 // ES5
 var inflect = require("jargon");
+```
+
+### Require.js
+
+To make npm packages available with require.js, make sure you have r.js installed first.
+
+```
+define(["require"] , function (require) {
+    var inflect = require("jargon");
+});
 ```
 
 ## Inflector Instances
@@ -138,13 +150,16 @@ inflect("appleTree").foreignKey.toString(); // apple_tree_id
 inflect("AppleTree").table.toString(); // apple_trees
 ```
 
-# Contribute to Jargon.js development
+# Contribute
 
-You are highly encouraged to fork this repo, make enhancements, and submit pull requests back. To contribute:
+We highly encourage you to fork, make enhancements, and then submit pull requests back!
+
+## Our Meager Requirements
 
 1. You must follow strict test-driven best practices.
-  * Tests must be written prior to library code being written. Google `Red, Green, Refactor` for more information on this expectation.
-2. You must adhere to our automated `.eslintrc` style guide and can ensure that it is passing without warnings or errors before you submit a pull request.
+    * Tests must be written prior to library code being written.
+    * Google `Red, Green, Refactor` for more information on this strict expectation.
+2. You must adhere to our automated `.eslintrc` style guide and must ensure that it is passing without warnings or errors before you submit a pull request.
 
 ## Public Shared Floobits Workspace
 
