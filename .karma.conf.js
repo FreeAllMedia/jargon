@@ -1,49 +1,65 @@
 // Karma configuration
 // Generated on Sat Jun 13 2015 13:23:14 GMT-0600 (MDT)
 
+var webdriverConfig = {
+    hostname: "ondemand.saucelabs.com",
+    port: 80,
+    user: process.env.SAUCE_USERNAME,
+    pwd: process.env.SAUCE_ACCESS_KEY
+};
+
 var customLaunchers = {
     "sl_chrome_43": {
-        base: "SauceLabs",
+        base: "WebDriver",
+        config: webdriverConfig,
         browserName: "chrome",
         version: "43"
     },
     "sl_chrome_42": {
-        base: "SauceLabs",
+        base: "WebDriver",
+        config: webdriverConfig,
         browserName: "chrome",
         version: "42"
     },
     "sl_chrome_36": {
-        base: "SauceLabs",
+        base: "WebDriver",
+        config: webdriverConfig,
         browserName: "chrome",
         version: "36"
     },
     "sl_chrome_31": {
-        base: "SauceLabs",
+        base: "WebDriver",
+        config: webdriverConfig,
         browserName: "chrome",
         version: "31"
     },
     "sl_firefox_37": {
-        base: "SauceLabs",
+        base: "WebDriver",
+        config: webdriverConfig,
         browserName: "firefox",
         version: "37"
     },
     "sl_firefox_38": {
-        base: "SauceLabs",
+        base: "WebDriver",
+        config: webdriverConfig,
         browserName: "firefox",
         version: "38"
     },
     "sl_ie_9": {
-        base: "SauceLabs",
+        base: "WebDriver",
+        config: webdriverConfig,
         browserName: "internet explorer",
         version: "9"
     },
     "sl_ie_10": {
-        base: "SauceLabs",
+        base: "WebDriver",
+        config: webdriverConfig,
         browserName: "internet explorer",
         version: "10"
     },
     "sl_ie_11": {
-        base: "SauceLabs",
+        base: "WebDriver",
+        config: webdriverConfig,
         browserName: "internet explorer",
         version: "11"
     }
