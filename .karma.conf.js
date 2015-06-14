@@ -89,7 +89,8 @@ module.exports = function(config) {
 
     sauceLabs: {
         testName: "Jargon.js",
-        recordVideo: true
+        recordVideo: true,
+        startConnect: false
     },
 
     customLaunchers: customLaunchers,
