@@ -1,76 +1,53 @@
-// Karma configuration
-// Generated on Sat Jun 13 2015 13:23:14 GMT-0600 (MDT)
-
-var webdriverConfig = {
-    hostname: "ondemand.saucelabs.com",
-    port: 80,
-    user: process.env.SAUCE_USERNAME,
-    pwd: process.env.SAUCE_ACCESS_KEY
-};
-
 var customLaunchers = {
+    // Chrome
     "sl_chrome_43": {
-        base: "WebDriver",
-        config: webdriverConfig,
+        base: "SauceLabs",
         browserName: "chrome",
-        version: "43",
-        pseudoActivityInterval: 30000
+        version: "43"
     },
     "sl_chrome_42": {
-        base: "WebDriver",
-        config: webdriverConfig,
+        base: "SauceLabs",
         browserName: "chrome",
-        version: "42",
-        pseudoActivityInterval: 30000
+        version: "42"
     },
     "sl_chrome_36": {
-        base: "WebDriver",
-        config: webdriverConfig,
+        base: "SauceLabs",
         browserName: "chrome",
-        version: "36",
-        pseudoActivityInterval: 30000
+        version: "36"
     },
     "sl_chrome_31": {
-        base: "WebDriver",
-        config: webdriverConfig,
+        base: "SauceLabs",
         browserName: "chrome",
-        version: "31",
-        pseudoActivityInterval: 30000
+        version: "31"
     },
+
+    // Firefox
     "sl_firefox_37": {
-        base: "WebDriver",
-        config: webdriverConfig,
+        base: "SauceLabs",
         browserName: "firefox",
-        version: "37",
-        pseudoActivityInterval: 30000
+        version: "37"
     },
     "sl_firefox_38": {
-        base: "WebDriver",
-        config: webdriverConfig,
+        base: "SauceLabs",
         browserName: "firefox",
-        version: "38",
-        pseudoActivityInterval: 30000
+        version: "38"
     },
+
+    // Internet Explorer
     "sl_ie_9": {
-        base: "WebDriver",
-        config: webdriverConfig,
+        base: "SauceLabs",
         browserName: "internet explorer",
-        version: "9",
-        pseudoActivityInterval: 30000
+        version: "9"
     },
     "sl_ie_10": {
-        base: "WebDriver",
-        config: webdriverConfig,
+        base: "SauceLabs",
         browserName: "internet explorer",
-        version: "10",
-        pseudoActivityInterval: 30000
+        version: "10"
     },
     "sl_ie_11": {
-        base: "WebDriver",
-        config: webdriverConfig,
+        base: "SauceLabs",
         browserName: "internet explorer",
-        version: "11",
-        pseudoActivityInterval: 30000
+        version: "11"
     }
 };
 
@@ -107,12 +84,12 @@ module.exports = function(config) {
     },
 
     browserify: {
-      debug: true
+      debug: false
     },
 
     sauceLabs: {
-        testName: "Jargon.js Unit Tests",
-        tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER
+        testName: "Jargon.js",
+        recordVideo: true
     },
 
     customLaunchers: customLaunchers,
@@ -133,7 +110,7 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
 
 
     // enable / disable watching file and executing tests whenever any file changes
