@@ -1,3 +1,3 @@
 import gulp from "gulp";
 
-gulp.task("test", ["test-server"]);
+gulp.task("test", ["test-server", "test-client"]);

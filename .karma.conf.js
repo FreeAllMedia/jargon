@@ -2,27 +2,49 @@
 // Generated on Sat Jun 13 2015 13:23:14 GMT-0600 (MDT)
 
 var customLaunchers = {
-    "sl_chrome": {
+    "sl_chrome_43": {
         base: "SauceLabs",
         browserName: "chrome",
-        platform: "Windows 7",
-        version: "35"
+        version: "43"
     },
-    "sl_firefox": {
+    "sl_chrome_42": {
+        base: "SauceLabs",
+        browserName: "chrome",
+        version: "42"
+    },
+    "sl_chrome_36": {
+        base: "SauceLabs",
+        browserName: "chrome",
+        version: "36"
+    },
+    "sl_chrome_31": {
+        base: "SauceLabs",
+        browserName: "chrome",
+        version: "31"
+    },
+    "sl_firefox_37": {
         base: "SauceLabs",
         browserName: "firefox",
-        version: "30"
+        version: "37"
     },
-    "sl_ios_safari": {
+    "sl_firefox_38": {
         base: "SauceLabs",
-        browserName: "iphone",
-        platform: "OS X 10.9",
-        version: "7.1"
+        browserName: "firefox",
+        version: "38"
+    },
+    "sl_ie_9": {
+        base: "SauceLabs",
+        browserName: "internet explorer",
+        version: "9"
+    },
+    "sl_ie_10": {
+        base: "SauceLabs",
+        browserName: "internet explorer",
+        version: "10"
     },
     "sl_ie_11": {
         base: "SauceLabs",
         browserName: "internet explorer",
-        platform: "Windows 8.1",
         version: "11"
     }
 };
@@ -64,9 +86,7 @@ module.exports = function(config) {
     },
 
     sauceLabs: {
-        testName: "Jargon.js Unit Tests",
-        username: "fam-operations",
-        accessKey: "b54ca685-f4fc-4498-87c0-05ac3123e44d"
+        testName: "Jargon.js Unit Tests"
     },
 
     customLaunchers: customLaunchers,
@@ -92,7 +112,6 @@ module.exports = function(config) {
 
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: false,
-
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher

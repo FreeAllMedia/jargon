@@ -8,12 +8,19 @@ An inflection/case/format/pluralization component with a chainable transforms.
 
 [![Dependency Status](https://david-dm.org/FreeAllMedia/jargon.png?theme=shields.io)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io) [![Dev Dependency Status](https://david-dm.org/FreeAllMedia/jargon/dev-status.svg)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io#info=devDependencies)
 
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/jargon.svg)](https://saucelabs.com/u/jargon)
+
 ## Compatibility
 
 We automatically test every release against:
 
 * **node:** `0.10`, `0.11`, `0.12`, & `iojs`
-* **browsers:** `Safari`, `Chrome`, `PhantomJS`, `Firefox`
+* **browsers:**
+	* `Safari`
+	* `Chrome`
+	* `PhantomJS`
+	* `Firefox`
+	* `Internet Explorer`
 
 # Getting Started
 
