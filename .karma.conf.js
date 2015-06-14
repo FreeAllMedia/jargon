@@ -86,7 +86,8 @@ module.exports = function(config) {
     },
 
     sauceLabs: {
-        testName: "Jargon.js Unit Tests"
+        testName: "Jargon.js Unit Tests",
+        tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER
     },
 
     customLaunchers: customLaunchers,
