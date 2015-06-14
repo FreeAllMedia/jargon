@@ -13,55 +13,64 @@ var customLaunchers = {
         base: "WebDriver",
         config: webdriverConfig,
         browserName: "chrome",
-        version: "43"
+        version: "43",
+        pseudoActivityInterval: 30000
     },
     "sl_chrome_42": {
         base: "WebDriver",
         config: webdriverConfig,
         browserName: "chrome",
-        version: "42"
+        version: "42",
+        pseudoActivityInterval: 30000
     },
     "sl_chrome_36": {
         base: "WebDriver",
         config: webdriverConfig,
         browserName: "chrome",
-        version: "36"
+        version: "36",
+        pseudoActivityInterval: 30000
     },
     "sl_chrome_31": {
         base: "WebDriver",
         config: webdriverConfig,
         browserName: "chrome",
-        version: "31"
+        version: "31",
+        pseudoActivityInterval: 30000
     },
     "sl_firefox_37": {
         base: "WebDriver",
         config: webdriverConfig,
         browserName: "firefox",
-        version: "37"
+        version: "37",
+        pseudoActivityInterval: 30000
     },
     "sl_firefox_38": {
         base: "WebDriver",
         config: webdriverConfig,
         browserName: "firefox",
-        version: "38"
+        version: "38",
+        pseudoActivityInterval: 30000
     },
     "sl_ie_9": {
         base: "WebDriver",
         config: webdriverConfig,
         browserName: "internet explorer",
-        version: "9"
+        version: "9",
+        pseudoActivityInterval: 30000
     },
     "sl_ie_10": {
         base: "WebDriver",
         config: webdriverConfig,
         browserName: "internet explorer",
-        version: "10"
+        version: "10",
+        pseudoActivityInterval: 30000
     },
     "sl_ie_11": {
         base: "WebDriver",
         config: webdriverConfig,
         browserName: "internet explorer",
-        version: "11"
+        version: "11",
+        pseudoActivityInterval: 30000
     }
 };
 
