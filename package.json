@@ -1,7 +1,7 @@
 {
   "name": "jargon",
-  "version": "0.1.8",
-  "description": "Inflection/case/format/pluralization component with a chainable interface sourced in ES6.",
+  "version": "0.1.9",
+  "description": "An inflection/case/format/pluralization component with a chainable transforms.",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
@@ -45,6 +45,13 @@
     "gulp": "^3.9.0",
     "gulp-babel": "^5.1.0",
     "gulp-istanbul": "^0.10.0",
-    "gulp-mocha": "^2.1.1"
+    "gulp-mocha": "^2.1.1",
+    "karma": "^0.12.36",
+    "karma-browserify": "^4.2.1",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^0.1.10",
+    "karma-sauce-launcher": "^0.2.11",
+    "karma-detect-browsers": "^2.0.0",
+    "mocha": "^2.2.5"
   }
 }
