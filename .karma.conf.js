@@ -1,25 +1,25 @@
 var customLaunchers = {
     // Chrome
-    // "sl_chrome_43": {
-    //     base: "SauceLabs",
-    //     browserName: "chrome",
-    //     version: "43"
-    // },
-    // "sl_chrome_42": {
-    //     base: "SauceLabs",
-    //     browserName: "chrome",
-    //     version: "42"
-    // },
-    // "sl_chrome_36": {
-    //     base: "SauceLabs",
-    //     browserName: "chrome",
-    //     version: "36"
-    // },
-    // "sl_chrome_31": {
-    //     base: "SauceLabs",
-    //     browserName: "chrome",
-    //     version: "31"
-    // },
+    "sl_chrome_43": {
+        base: "SauceLabs",
+        browserName: "chrome",
+        version: "43"
+    },
+    "sl_chrome_42": {
+        base: "SauceLabs",
+        browserName: "chrome",
+        version: "42"
+    },
+    "sl_chrome_36": {
+        base: "SauceLabs",
+        browserName: "chrome",
+        version: "36"
+    },
+    "sl_chrome_31": {
+        base: "SauceLabs",
+        browserName: "chrome",
+        version: "31"
+    },
 
     // Firefox
     "sl_firefox_37": {
@@ -27,28 +27,28 @@ var customLaunchers = {
         browserName: "firefox",
         version: "37"
     },
-    // "sl_firefox_38": {
-    //     base: "SauceLabs",
-    //     browserName: "firefox",
-    //     version: "38"
-    // },
+    "sl_firefox_38": {
+        base: "SauceLabs",
+        browserName: "firefox",
+        version: "38"
+    },
 
     // Internet Explorer
-    // "sl_ie_9": {
-    //     base: "SauceLabs",
-    //     browserName: "internet explorer",
-    //     version: "9"
-    // },
-    // "sl_ie_10": {
-    //     base: "SauceLabs",
-    //     browserName: "internet explorer",
-    //     version: "10"
-    // },
-    // "sl_ie_11": {
-    //     base: "SauceLabs",
-    //     browserName: "internet explorer",
-    //     version: "11"
-    // }
+    "sl_ie_9": {
+        base: "SauceLabs",
+        browserName: "internet explorer",
+        version: "9"
+    },
+    "sl_ie_10": {
+        base: "SauceLabs",
+        browserName: "internet explorer",
+        version: "10"
+    },
+    "sl_ie_11": {
+        base: "SauceLabs",
+        browserName: "internet explorer",
+        version: "11"
+    }
 };
 
 module.exports = function(config) {
