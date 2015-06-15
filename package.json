@@ -1,7 +1,7 @@
 {
   "name": "jargon",
-  "version": "0.1.12",
-  "description": "An inflection/case/format/pluralization component with a chainable transforms.",
+  "version": "0.1.13",
+  "description": "ES6 component for string inflection/case/format/pluralization. Highly tested. Supports chaining.",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
@@ -14,7 +14,11 @@
     "Inflect",
     "Change",
     "Case",
-    "String"
+    "String",
+    "Plural",
+    "Snake",
+    "Pascal",
+    "Underscore"
   ],
   "author": "FreeAllMedia, LLC",
   "contributors": [
