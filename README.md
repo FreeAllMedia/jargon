@@ -2,17 +2,13 @@
 
 An inflection/case/format/pluralization component with a chainable transforms.
 
-## At a Glance
-
 [![npm version](https://img.shields.io/npm/v/jargon.svg)](https://www.npmjs.com/package/jargon) [![npm downloads](https://img.shields.io/npm/dm/jargon.svg)](https://www.npmjs.com/package/jargon) [![license type](https://img.shields.io/npm/l/jargon.svg)](https://github.com/FreeAllMedia/jargon/blob/master/LICENSE)
-
-**Quality Control:**
 
 [![Build Status](https://travis-ci.org/FreeAllMedia/jargon.png?branch=master)](https://travis-ci.org/FreeAllMedia/jargon) [![Test Coverage](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/coverage.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/coverage) [![Code Climate](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/gpa.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/feed)
 
 [![Dependency Status](https://david-dm.org/FreeAllMedia/jargon.png?theme=shields.io)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io) [![Dev Dependency Status](https://david-dm.org/FreeAllMedia/jargon/dev-status.svg)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io#info=devDependencies)
 
-**Compatibile With:**
+**Automatically tested for compatibility with:**
 
 ![ECMAScript 5](https://img.shields.io/badge/ECMAScript-5-yellow.svg) ![ECMAScript 6](https://img.shields.io/badge/ECMAScript-6-yellow.svg)
 
