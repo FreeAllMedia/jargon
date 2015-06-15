@@ -5,6 +5,8 @@ gulp.task("test-client", function (done) {
 	if (process.env.TRAVIS_BUILD_NUMBER) {
 		if (process.env.TRAVIS_JOB_NUMBER === `${process.env.TRAVIS_BUILD_NUMBER}.1`) {
 			runKarma(done);
+		} else {
+			done();
 		}
 	} else {
 		runKarma(done);
