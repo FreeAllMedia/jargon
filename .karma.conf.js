@@ -74,7 +74,7 @@ if (process.env.SAUCE_USERNAME) {
     };
     const customLaunchers = require("./.sauce.json").platforms;
     configOptions.customLaunchers = customLaunchers;
-    browsers = Object.keys(customLaunchers);
+    configOptions.browsers = Object.keys(customLaunchers);
     reporters.push("saucelabs");
 } else {
     /**
