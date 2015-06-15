@@ -4,37 +4,26 @@ An inflection/case/format/pluralization component with a chainable transforms.
 
 [![npm version](https://img.shields.io/npm/v/jargon.svg)](https://www.npmjs.com/package/jargon) [![npm downloads](https://img.shields.io/npm/dm/jargon.svg)](https://www.npmjs.com/package/jargon)
 
+## Quality
+
 [![Build Status](https://travis-ci.org/FreeAllMedia/jargon.png?branch=master)](https://travis-ci.org/FreeAllMedia/jargon) [![Test Coverage](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/coverage.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/coverage) [![Code Climate](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/gpa.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/feed)
 
 [![Dependency Status](https://david-dm.org/FreeAllMedia/jargon.png?theme=shields.io)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io) [![Dev Dependency Status](https://david-dm.org/FreeAllMedia/jargon/dev-status.svg)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io#info=devDependencies)
 
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/jargon.svg)](https://saucelabs.com/u/jargon)
-
 ## Compatibility
 
-We automatically test every release against:
+* **node:** `0.10`, `0.11`, `0.12`
+* **iojs:** `1.x`, `2.x`
 
-* **node:** `0.10`, `0.11`, `0.12`, & `iojs`
-* **browsers:**
-	* `Safari`
-	* `Chrome`
-	* `PhantomJS`
-	* `Firefox`
-	* `Internet Explorer`
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/jargon.svg)](https://saucelabs.com/u/jargon)
 
-# Getting Started
-
-## Installation
+# Installation
 
 ```
 npm install jargon
 ```
 
-## Setup
-
-### Node.js / Browserify / Webpack
-
-#### Import `inflect` from jargon
+# Setup
 
 ```
 // ES6
@@ -46,15 +35,14 @@ import inflect from "jargon";
 var inflect = require("jargon");
 ```
 
-### Require.js
-
-To make npm packages available with require.js, make sure you have r.js installed first.
-
 ```
+// Require.js
 define(["require"] , function (require) {
     var inflect = require("jargon");
 });
 ```
+
+# Getting Started
 
 ## Inflector Instances
 
