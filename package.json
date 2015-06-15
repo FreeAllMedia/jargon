@@ -1,6 +1,6 @@
 {
   "name": "jargon",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "ES6 component for string inflection/case/format/pluralization. Highly tested. Supports chaining.",
   "main": "index.js",
   "scripts": {
