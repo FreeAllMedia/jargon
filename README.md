@@ -1,18 +1,14 @@
+[![Build Status](https://travis-ci.org/FreeAllMedia/jargon.png?branch=master)](https://travis-ci.org/FreeAllMedia/jargon) [![Test Coverage](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/coverage.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/coverage) [![Code Climate](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/gpa.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/feed) [![Dependency Status](https://david-dm.org/FreeAllMedia/jargon.png?theme=shields.io)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io) [![Dev Dependency Status](https://david-dm.org/FreeAllMedia/jargon/dev-status.svg)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io#info=devDependencies)
+
+[![npm version](https://img.shields.io/npm/v/jargon.svg)](https://www.npmjs.com/package/jargon) [![npm downloads](https://img.shields.io/npm/dm/jargon.svg)](https://www.npmjs.com/package/jargon) [![license type](https://img.shields.io/npm/l/jargon.svg)](https://github.com/FreeAllMedia/jargon/blob/master/LICENSE)
+
 # Jargon.js
 
 An inflection/case/format/pluralization component with a chainable transforms.
 
-[![npm version](https://img.shields.io/npm/v/jargon.svg)](https://www.npmjs.com/package/jargon) [![npm downloads](https://img.shields.io/npm/dm/jargon.svg)](https://www.npmjs.com/package/jargon) [![license type](https://img.shields.io/npm/l/jargon.svg)](https://github.com/FreeAllMedia/jargon/blob/master/LICENSE)
-
-[![Build Status](https://travis-ci.org/FreeAllMedia/jargon.png?branch=master)](https://travis-ci.org/FreeAllMedia/jargon) [![Test Coverage](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/coverage.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/coverage) [![Code Climate](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/gpa.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/feed)
-
-[![Dependency Status](https://david-dm.org/FreeAllMedia/jargon.png?theme=shields.io)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io) [![Dev Dependency Status](https://david-dm.org/FreeAllMedia/jargon/dev-status.svg)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io#info=devDependencies)
-
 **Automatically tested for compatibility with:**
 
-![ECMAScript 5](https://img.shields.io/badge/ECMAScript-5-yellow.svg) ![ECMAScript 6](https://img.shields.io/badge/ECMAScript-6-yellow.svg)
-
-![node 0.10.x](https://img.shields.io/badge/node-0.10.x-yellow.svg) ![node 0.11.x](https://img.shields.io/badge/node-0.11.x-yellow.svg) ![node 0.12.x](https://img.shields.io/badge/node-0.12.x-yellow.svg) ![iojs 1.x.x](https://img.shields.io/badge/iojs-1.x.x-yellow.svg) ![iojs 2.x.x](https://img.shields.io/badge/iojs-2.x.x-yellow.svg)
+![ECMAScript 5](https://img.shields.io/badge/ECMAScript-5-yellow.svg) ![ECMAScript 6](https://img.shields.io/badge/ECMAScript-6-yellow.svg) ![node 0.10.x](https://img.shields.io/badge/node-0.10.x-yellow.svg) ![node 0.11.x](https://img.shields.io/badge/node-0.11.x-yellow.svg) ![node 0.12.x](https://img.shields.io/badge/node-0.12.x-yellow.svg) ![iojs 1.x.x](https://img.shields.io/badge/iojs-1.x.x-yellow.svg) ![iojs 2.x.x](https://img.shields.io/badge/iojs-2.x.x-yellow.svg)
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/jargon.svg)](https://saucelabs.com/u/jargon)
 
