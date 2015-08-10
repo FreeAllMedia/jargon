@@ -1,7 +1,7 @@
 var gulp = require("gulp");
 var karma = require("karma").server;
 
-gulp.task("test-browsers", function (done) {
+gulp.task("test-browsers", ["build"], function (done) {
 	/**
 	 * This ensures that the browser tests only run on the first job,
 	 * instead of wastefully running the browser tests on every job.
@@ -19,7 +19,6 @@ gulp.task("test-browsers", function (done) {
 
 function runKarma(done) {
 	karma.start({
-		configFile: __dirname + "/../.karma.conf.js",
-		singleRun: true
+		configFile: __dirname + "/../.karma.conf.js"
 	}, done);
 }

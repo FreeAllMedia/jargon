@@ -45,17 +45,22 @@
   },
   "devDependencies": {
     "babel": "^5.5.6",
+    "babel-eslint": "^4.0.5",
     "chai": "^3.0.0",
+    "eslint": "^1.1.0",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.1.0",
     "gulp-istanbul": "^0.10.0",
     "gulp-mocha": "^2.1.1",
+    "gulp-util": "^3.0.6",
     "karma": "^0.12.36",
     "karma-browserify": "^4.2.1",
     "karma-chai": "^0.1.0",
+    "karma-detect-browsers": "^2.0.0",
     "karma-mocha": "^0.1.10",
     "karma-sauce-launcher": "^0.2.11",
-    "karma-detect-browsers": "^2.0.0",
-    "mocha": "^2.2.5"
-  }
+    "mocha": "^2.2.5",
+    "superstack": "0.0.4"
+  },
+  "generatorVersion": "0.2.20"
 }
