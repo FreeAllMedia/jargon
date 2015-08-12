@@ -1,19 +1,17 @@
-const inflection = require("inflection");
+import inflection from "inflection";
+import privateData from "incognito";
 
 const getWords = Symbol();
 
 export class Inflector {
 	constructor(value) {
+		const _ = privateData(this);
+		_.value = value;
 		Object.defineProperties(this, {
-			"value": {
-				writable: true,
-				value: value,
-				enumerable: false
-			},
 			"plural": {
 				enumerable: true,
 				get: () => {
-					this.value = inflection.pluralize(this.value);
+					_.value = inflection.pluralize(_.value);
 					return this;
 				}
 			},
@@ -30,35 +28,35 @@ export class Inflector {
 							return word.charAt(0).toLowerCase() + word.slice(1);
 						}
 					});
-					this.value = capitalizedWords.join("");
+					_.value = capitalizedWords.join("");
 					return this;
 				}
 			},
 			"snake": {
 				enumerable: true,
 				get: () => {
-					this.value = inflection.underscore(this.value);
+					_.value = inflection.underscore(_.value);
 					return this;
 				}
 			},
 			"foreignKey": {
 				enumerable: true,
 				get: () => {
-					this.value = inflection.foreign_key(this.value);
+					_.value = inflection.foreign_key(_.value);
 					return this;
 				}
 			},
 			"pascal": {
 				enumerable: true,
 				get: () => {
-					this.value = inflection.camelize(this.value);
+					_.value = inflection.camelize(_.value);
 					return this;
 				}
 			},
 			"table": {
 				enumerable: true,
 				get: () => {
-					this.value = inflection.tableize(this.value);
+					_.value = inflection.tableize(_.value);
 					return this;
 				}
 			}
@@ -66,11 +64,12 @@ export class Inflector {
 	}
 
 	[getWords]() {
-		let words = [this.value];
-		if(this.value.indexOf(" ") >= 0) {
-			words = this.value.split(" ");
-		} else if(this.value.indexOf("_") >= 0) {
-			words = this.value.split("_");
+		const _ = privateData(this);
+		let words = [_.value];
+		if(_.value.indexOf(" ") >= 0) {
+			words = _.value.split(" ");
+		} else if(_.value.indexOf("_") >= 0) {
+			words = _.value.split("_");
 		} else {
 			//TODO get words from camel/pascal
 				//split by uppercases
@@ -79,7 +78,7 @@ export class Inflector {
 	}
 
 	toString() {
-		return this.value.toString();
+		return privateData(this).value.toString();
 	}
 }
 

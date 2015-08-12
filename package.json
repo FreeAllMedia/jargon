@@ -41,6 +41,7 @@
   },
   "homepage": "https://github.com/FreeAllMedia/jargon",
   "dependencies": {
+    "incognito": "^0.1.2",
     "inflection": "^1.7.1"
   },
   "devDependencies": {
