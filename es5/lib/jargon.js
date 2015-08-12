@@ -8,9 +8,17 @@ var _createClass = (function () { function defineProperties(target, props) { for
 
 exports["default"] = inflect;
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var inflection = require("inflection");
+var _inflection = require("inflection");
+
+var _inflection2 = _interopRequireDefault(_inflection);
+
+var _incognito = require("incognito");
+
+var _incognito2 = _interopRequireDefault(_incognito);
 
 var getWords = Symbol();
 
@@ -20,16 +28,13 @@ var Inflector = (function () {
 
 		_classCallCheck(this, Inflector);
 
+		var _ = (0, _incognito2["default"])(this);
+		_.value = value;
 		Object.defineProperties(this, {
-			"value": {
-				writable: true,
-				value: value,
-				enumerable: false
-			},
 			"plural": {
 				enumerable: true,
 				get: function get() {
-					_this.value = inflection.pluralize(_this.value);
+					_.value = _inflection2["default"].pluralize(_.value);
 					return _this;
 				}
 			},
@@ -46,35 +51,35 @@ var Inflector = (function () {
 							return word.charAt(0).toLowerCase() + word.slice(1);
 						}
 					});
-					_this.value = capitalizedWords.join("");
+					_.value = capitalizedWords.join("");
 					return _this;
 				}
 			},
 			"snake": {
 				enumerable: true,
 				get: function get() {
-					_this.value = inflection.underscore(_this.value);
+					_.value = _inflection2["default"].underscore(_.value);
 					return _this;
 				}
 			},
 			"foreignKey": {
 				enumerable: true,
 				get: function get() {
-					_this.value = inflection.foreign_key(_this.value);
+					_.value = _inflection2["default"].foreign_key(_.value);
 					return _this;
 				}
 			},
 			"pascal": {
 				enumerable: true,
 				get: function get() {
-					_this.value = inflection.camelize(_this.value);
+					_.value = _inflection2["default"].camelize(_.value);
 					return _this;
 				}
 			},
 			"table": {
 				enumerable: true,
 				get: function get() {
-					_this.value = inflection.tableize(_this.value);
+					_.value = _inflection2["default"].tableize(_.value);
 					return _this;
 				}
 			}
@@ -84,18 +89,19 @@ var Inflector = (function () {
 	_createClass(Inflector, [{
 		key: getWords,
 		value: function () {
-			var words = [this.value];
-			if (this.value.indexOf(" ") >= 0) {
-				words = this.value.split(" ");
-			} else if (this.value.indexOf("_") >= 0) {
-				words = this.value.split("_");
+			var _ = (0, _incognito2["default"])(this);
+			var words = [_.value];
+			if (_.value.indexOf(" ") >= 0) {
+				words = _.value.split(" ");
+			} else if (_.value.indexOf("_") >= 0) {
+				words = _.value.split("_");
 			} else {}
 			return words;
 		}
 	}, {
 		key: "toString",
 		value: function toString() {
-			return this.value.toString();
+			return (0, _incognito2["default"])(this).value.toString();
 		}
 	}]);
 
