@@ -35,7 +35,7 @@ export class Inflector {
 			"snake": {
 				enumerable: true,
 				get: () => {
-					_.value = inflection.underscore(_.value);
+					_.value = inflection.underscore(_.value).replace(/ /g, "");
 					return this;
 				}
 			},

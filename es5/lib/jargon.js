@@ -58,7 +58,7 @@ var Inflector = (function () {
 			"snake": {
 				enumerable: true,
 				get: function get() {
-					_.value = _inflection2["default"].underscore(_.value);
+					_.value = _inflection2["default"].underscore(_.value).replace(/ /g, "");
 					return _this;
 				}
 			},
@@ -88,14 +88,17 @@ var Inflector = (function () {
 
 	_createClass(Inflector, [{
 		key: getWords,
-		value: function () {
+		value: function value() {
 			var _ = (0, _incognito2["default"])(this);
 			var words = [_.value];
 			if (_.value.indexOf(" ") >= 0) {
 				words = _.value.split(" ");
 			} else if (_.value.indexOf("_") >= 0) {
 				words = _.value.split("_");
-			} else {}
+			} else {
+				//TODO get words from camel/pascal
+				//split by uppercases
+			}
 			return words;
 		}
 	}, {
@@ -113,6 +116,3 @@ exports.Inflector = Inflector;
 function inflect(value) {
 	return new Inflector(value);
 }
-
-//TODO get words from camel/pascal
-//split by uppercases

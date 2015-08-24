@@ -16,6 +16,10 @@ describe("jargon(string)", () => {
 		it("should provide a way to get a snake cased string from camel cased string", () => {
 			jargon("appleTree").snake.toString().should.equal("apple_tree");
 		});
+
+		it("should provide a way to get a snake cased string from title cased string", () => {
+			jargon("Apple Tree Lake").snake.toString().should.equal("apple_tree_lake");
+		});
 	});
 
 	describe(".camel", () => {
