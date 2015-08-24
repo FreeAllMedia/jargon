@@ -20,6 +20,8 @@ var _incognito = require("incognito");
 
 var _incognito2 = _interopRequireDefault(_incognito);
 
+var i = require('i')();
+
 var getWords = Symbol();
 
 var Inflector = (function () {
@@ -58,7 +60,10 @@ var Inflector = (function () {
 			"snake": {
 				enumerable: true,
 				get: function get() {
-					_.value = _inflection2["default"].underscore(_.value).replace(/ /g, "");
+					_.value = i.camelize(_.value);
+					_.value = _.value.replace(/ /g, "_");
+					_.value = i.underscore(_.value);
+
 					return _this;
 				}
 			},
