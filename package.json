@@ -1,67 +1,70 @@
 {
-	"name": "jargon",
-	"version": "0.1.19",
-	"description": "ES6 component for string inflection/case/format/pluralization. Highly tested. Supports chaining.",
-	"main": "index.js",
-	"scripts": {
-		"test": "gulp test"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/FreeAllMedia/jargon.git"
-	},
-	"keywords": [
-		"Inflect",
-		"Change",
-		"Case",
-		"String",
-		"Plural",
-		"Snake",
-		"Pascal",
-		"Underscore"
-	],
-	"author": "FreeAllMedia, LLC",
-	"contributors": [
-		{
-			"name": "nicosommi",
-			"email": "nicosommi@gmail.com"
-		},
-		{
-			"name": "dcrockwell",
-			"email": "dcautomates@gmail.com"
-		},
-		{
-			"name": "paulgoggin",
-			"email": "pgoggin@gmail.com"
-		}
-	],
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/FreeAllMedia/jargon/issues"
-	},
-	"homepage": "https://github.com/FreeAllMedia/jargon",
-	"dependencies": {
-		"incognito": "^0.1.2",
-		"inflection": "^1.7.1"
-	},
-	"devDependencies": {
-		"babel": "^5.5.6",
+  "name": "jargon",
+  "version": "0.1.20",
+  "description": "ES6 component for string inflection/case/format/pluralization. Highly tested. Supports chaining.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FreeAllMedia/jargon.git"
+  },
+  "keywords": [
+    "Inflect",
+    "Change",
+    "Case",
+    "String",
+    "Plural",
+    "Snake",
+    "Pascal",
+    "Underscore"
+  ],
+  "author": "FreeAllMedia, LLC",
+  "contributors": [
+    {
+      "name": "nicosommi",
+      "email": "nicosommi@gmail.com"
+    },
+    {
+      "name": "dcrockwell",
+      "email": "dcautomates@gmail.com"
+    },
+    {
+      "name": "paulgoggin",
+      "email": "pgoggin@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FreeAllMedia/jargon/issues"
+  },
+  "homepage": "https://github.com/FreeAllMedia/jargon",
+  "dependencies": {
+    "i": "^0.3.3",
+    "incognito": "^0.1.2",
+    "inflection": "^1.7.1",
+    "underscore": "^1.8.3",
+    "underscore.inflections": "^0.2.1"
+  },
+  "devDependencies": {
+    "babel": "^5.5.6",
     "babel-eslint": "^4.0.5",
+    "chai": "^3.0.0",
     "eslint": "^0.24.0",
-		"chai": "^3.0.0",
-		"gulp": "^3.9.0",
-		"gulp-babel": "^5.1.0",
-		"gulp-istanbul": "^0.10.0",
-		"gulp-mocha": "^2.1.1",
-		"gulp-util": "^3.0.6",
-		"karma": "^0.12.36",
-		"karma-browserify": "^4.2.1",
-		"karma-chai": "^0.1.0",
-		"karma-detect-browsers": "^2.0.0",
-		"karma-mocha": "^0.1.10",
-		"karma-sauce-launcher": "^0.2.11",
-		"mocha": "^2.2.5",
-		"superstack": "0.0.4"
-	},
-	"generatorVersion": "0.2.20"
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-istanbul": "^0.10.0",
+    "gulp-mocha": "^2.1.1",
+    "gulp-util": "^3.0.6",
+    "karma": "^0.12.36",
+    "karma-browserify": "^4.2.1",
+    "karma-chai": "^0.1.0",
+    "karma-detect-browsers": "^2.0.0",
+    "karma-mocha": "^0.1.10",
+    "karma-sauce-launcher": "^0.2.11",
+    "mocha": "^2.2.5",
+    "superstack": "0.0.4"
+  },
+  "generatorVersion": "0.2.20"
 }

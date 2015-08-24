@@ -26,6 +26,10 @@ describe("jargon(string)", function () {
 		it("should provide a way to get a snake cased string from title cased string", function () {
 			(0, _libJargonJs2["default"])("Apple Tree Lake").snake.toString().should.equal("apple_tree_lake");
 		});
+
+		it("should provide a way to get a snake cased string from title cased string containing numbers", function () {
+			(0, _libJargonJs2["default"])("Apple 20 Tree Lake").snake.toString().should.equal("apple_20_tree_lake");
+		});
 	});
 
 	describe(".camel", function () {
