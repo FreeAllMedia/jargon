@@ -1,6 +1,6 @@
-{ 
+{
   "name": "jargon",
-  "version": "0.1.20",
+  "version": "0.1.22",
   "description": "ES6 component for string inflection/case/format/pluralization. Highly tested. Supports chaining.",
   "main": "index.js",
   "scripts": {
@@ -41,6 +41,7 @@
   },
   "homepage": "https://github.com/FreeAllMedia/jargon",
   "dependencies": {
+    "coveralls": "^2.11.4",
     "i": "^0.3.3",
     "incognito": "^0.1.2",
     "inflection": "^1.7.1",
