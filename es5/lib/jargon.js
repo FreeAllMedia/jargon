@@ -20,6 +20,8 @@ var _incognito = require("incognito");
 
 var _incognito2 = _interopRequireDefault(_incognito);
 
+var i = require('i')();
+
 var getWords = Symbol();
 
 var Inflector = (function () {
@@ -58,7 +60,10 @@ var Inflector = (function () {
 			"snake": {
 				enumerable: true,
 				get: function get() {
-					_.value = _inflection2["default"].underscore(_.value);
+					_.value = i.camelize(_.value);
+					_.value = _.value.replace(/ /g, "_");
+					_.value = i.underscore(_.value);
+
 					return _this;
 				}
 			},
@@ -88,14 +93,17 @@ var Inflector = (function () {
 
 	_createClass(Inflector, [{
 		key: getWords,
-		value: function () {
+		value: function value() {
 			var _ = (0, _incognito2["default"])(this);
 			var words = [_.value];
 			if (_.value.indexOf(" ") >= 0) {
 				words = _.value.split(" ");
 			} else if (_.value.indexOf("_") >= 0) {
 				words = _.value.split("_");
-			} else {}
+			} else {
+				//TODO get words from camel/pascal
+				//split by uppercases
+			}
 			return words;
 		}
 	}, {
@@ -113,6 +121,3 @@ exports.Inflector = Inflector;
 function inflect(value) {
 	return new Inflector(value);
 }
-
-//TODO get words from camel/pascal
-//split by uppercases

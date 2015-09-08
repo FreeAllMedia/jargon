@@ -1,6 +1,8 @@
 import inflection from "inflection";
 import privateData from "incognito";
 
+const i = require('i')();
+
 const getWords = Symbol();
 
 export class Inflector {
@@ -35,7 +37,10 @@ export class Inflector {
 			"snake": {
 				enumerable: true,
 				get: () => {
-					_.value = inflection.underscore(_.value);
+					_.value = i.camelize(_.value);
+					_.value = _.value.replace(/ /g,"_");
+					_.value = i.underscore(_.value);
+
 					return this;
 				}
 			},
