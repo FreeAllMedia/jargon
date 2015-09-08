@@ -14,7 +14,8 @@ inflect(myString).snake.toString(); // "apple_sauce"
 inflect(myString).snake.plural.toString(); // "apple_sauces"
 ```
 
-[![Build Status](https://travis-ci.org/FreeAllMedia/jargon.png?branch=master)](https://travis-ci.org/FreeAllMedia/jargon) [![Test Coverage](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/coverage.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/coverage) [![Code Climate](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/gpa.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/feed) [![Dependency Status](https://david-dm.org/FreeAllMedia/jargon.png?theme=shields.io)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io) [![Dev Dependency Status](https://david-dm.org/FreeAllMedia/jargon/dev-status.svg)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io#info=devDependencies)
+[![Build Status](https://travis-ci.org/FreeAllMedia/jargon.png?branch=master)](https://travis-ci.org/FreeAllMedia/jargon) [![Coverage Status](ht
+tps://coveralls.io/repos/FreeAllMedia/jargon/badge.svg)](https://coveralls.io/r/FreeAllMedia/jargon) [![Code Climate](https://codeclimate.com/repos/557b3d7de30ba0742500838c/badges/d525182d1790d6589836/gpa.svg)](https://codeclimate.com/repos/557b3d7de30ba0742500838c/feed) [![Dependency Status](https://david-dm.org/FreeAllMedia/jargon.png?theme=shields.io)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io) [![Dev Dependency Status](https://david-dm.org/FreeAllMedia/jargon/dev-status.svg)](https://david-dm.org/FreeAllMedia/jargon?theme=shields.io#info=devDependencies)
 
 # Compatibility
 
