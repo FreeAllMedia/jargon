@@ -67,6 +67,13 @@ var Inflector = (function () {
 					return _this;
 				}
 			},
+			"title": {
+				enumerable: true,
+				get: function get() {
+					_.value = _inflection2["default"].titleize(_.value.replace(/[_-]/, " ").replace(/([a-z])([A-Z])/, "$1 $2"));
+					return _this;
+				}
+			},
 			"foreignKey": {
 				enumerable: true,
 				get: function get() {

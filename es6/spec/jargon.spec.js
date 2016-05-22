@@ -64,6 +64,20 @@ describe("jargon(string)", () => {
 		});
 	});
 
+	describe(".title", () => {
+		it("should return an inflector object in order to allow chaining", () => {
+			(jargon("appleTree").title instanceof Inflector).should.be.true;
+		});
+
+		it("should provide a way to get a title for a string", () => {
+			jargon("apple-tree").title.toString().should.equal("Apple Tree");
+		});
+
+		it("should provide a way to get a title for a string", () => {
+			jargon("appleTree").title.toString().should.equal("Apple Tree");
+		});
+	});
+
 	describe(".foreignKey", () => {
 		it("should return an inflector object in order to allow chaining", () => {
 			(jargon("appleTree").foreignKey instanceof Inflector).should.be.true;
