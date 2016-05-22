@@ -44,6 +44,17 @@ export class Inflector {
 					return this;
 				}
 			},
+			"title": {
+				enumerable: true,
+				get: () => {
+					_.value = inflection.titleize(
+						_.value
+							.replace(/[_-]/, " ")
+							.replace(/([a-z])([A-Z])/, "$1 $2")
+					);
+					return this;
+				}
+			},
 			"foreignKey": {
 				enumerable: true,
 				get: () => {

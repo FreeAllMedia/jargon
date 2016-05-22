@@ -70,6 +70,20 @@ describe("jargon(string)", function () {
 		});
 	});
 
+	describe(".title", function () {
+		it("should return an inflector object in order to allow chaining", function () {
+			((0, _libJargonJs2["default"])("appleTree").title instanceof _libJargonJs.Inflector).should.be["true"];
+		});
+
+		it("should provide a way to get a title for a string", function () {
+			(0, _libJargonJs2["default"])("apple-tree").title.toString().should.equal("Apple Tree");
+		});
+
+		it("should provide a way to get a title for a string", function () {
+			(0, _libJargonJs2["default"])("appleTree").title.toString().should.equal("Apple Tree");
+		});
+	});
+
 	describe(".foreignKey", function () {
 		it("should return an inflector object in order to allow chaining", function () {
 			((0, _libJargonJs2["default"])("appleTree").foreignKey instanceof _libJargonJs.Inflector).should.be["true"];
