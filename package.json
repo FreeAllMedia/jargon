@@ -41,15 +41,13 @@
   },
   "homepage": "https://github.com/FreeAllMedia/jargon",
   "dependencies": {
-    "coveralls": "^2.11.4",
     "i": "^0.3.3",
     "incognito": "^0.1.2",
     "inflection": "^1.7.1",
-    "underscore": "^1.8.3",
     "underscore.inflections": "^0.2.1"
   },
   "devDependencies": {
-    "babel": "^5.5.6",
+		"babel": "^5.5.6",
     "babel-eslint": "^4.0.5",
     "chai": "^3.0.0",
     "eslint": "^0.24.0",

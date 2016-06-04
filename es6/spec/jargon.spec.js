@@ -52,6 +52,14 @@ describe("jargon(string)", () => {
 		it("should provide a way to get a camel cased string from snake cased string", () => {
 			jargon("apple_tree").pascal.toString().should.equal("AppleTree");
 		});
+
+		it("should convert hyphenated names into pascal case", () => {
+			jargon("apple-tree").pascal.toString().should.equal("AppleTree");
+		});
+
+		it("should convert spaced names into pascal case", () => {
+			jargon("apple tree").pascal.toString().should.equal("AppleTree");
+		});
 	});
 
 	describe(".plural", () => {
