@@ -84,6 +84,7 @@ var Inflector = (function () {
 			"pascal": {
 				enumerable: true,
 				get: function get() {
+					_.value = _.value.replace(/[ -]/g, "_");
 					_.value = _inflection2["default"].camelize(_.value);
 					return _this;
 				}

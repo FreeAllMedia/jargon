@@ -65,6 +65,7 @@ export class Inflector {
 			"pascal": {
 				enumerable: true,
 				get: () => {
+					_.value = _.value.replace(/[ -]/g, "_");
 					_.value = inflection.camelize(_.value);
 					return this;
 				}
